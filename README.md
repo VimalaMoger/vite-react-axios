@@ -8,8 +8,8 @@ vite-react-axios/
     │   ├── App.jsx
     │   ├── api.js
     │   └── main.jsx
-    ├── React Components
-    ├── Axios API call Async JS functions
+        ├── React Components
+        ├── Axios API call Async JS functions
     ├── index.html
     ├── package.json
     └── vite.config.js

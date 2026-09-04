@@ -2,7 +2,7 @@
 
 ## Axios in a Vite + React project
 
-'''
+```
 vite-react-axios/
     ├── src/ 
     │   ├── App.jsx
@@ -13,7 +13,7 @@ vite-react-axios/
     ├── index.html
     ├── package.json
     └── vite.config.js
-'''
+```
 
 Components created:
 

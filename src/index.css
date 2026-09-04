@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-mint-500: oklch(0.72 0.11 178);
+    --font-grey-700: grey;
+    --color-dark:#4C1D95;
+    --color-lighter:#F5F3FF;
+    --color-light:#DDD6FE;
+    --color-normalbg:#f3f4f6;
+    --color-darkbg:#858e99;
+    --font-primary: "Josefin Sans";
+    --text-justify: justify-between;
+}

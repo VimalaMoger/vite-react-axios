@@ -2,28 +2,30 @@
 
 ## Axios in a Vite + React project
 
-'''
+```
 vite-react-axios/
     ├── src/ 
     │   ├── App.jsx
     │   ├── api.js
     │   └── main.jsx
-    ├── React Components
-    ├── Axios API call Async JS functions
+        ├── React Components
+        ├── Axios API call Async JS functions
     ├── index.html
     ├── package.json
     └── vite.config.js
-'''
+```
 
 Components created:
 
-- Header functional component(Menu items enhancement) 
-- About, Contact, Login, Cart, Checkout
-- Home, PageTitle, PageHeading
-- SearchBox and Dropdown  
-- ProductCard, ProductListings, Price, ProductDetail
-- Register, Profile, UserOrders, AdminOrders, AdminMessages with action buttons
-- Footer
+ ```
+Header functional component(Menu items enhancement), About, Contact, Login, Cart
+SearchBox and Dropdown
+Home, PageTitle, PageHeading
+ProductCard, ProductListings, Price, ProductDetail
+Checkout
+Register, Profile, UserOrders, AdminOrders/Messages with action buttons
+Footer
+```
 
 Features and enhancements:
 
@@ -60,8 +62,9 @@ Stripe account creation:
 - Implementing Checkout with Stripe with required Address details before proceed with Checkout
 - Payment processing using Orders API call
 
+Axios:
 - Axios library for API call, including CORS during development
-- Created Axios instance with default settings
+- Axios instance with default settings
 - Sending JWT Token in the request for back end validation
 
 Tailwind CSS:
@@ -75,17 +78,15 @@ UI:
 - Testing end to end register, login operations with new changes
 - Testing the app to validate Redux changes around the cart state
 
-- React app build and deployment
-
 Dependencies:
 
 - Node.js v24.11.1
-- npm 11.6.2
+- Npm 11.6.2
 - Tailwind CSS 4.2.3
 - VITE 8.0.11
 - Axios
 - React-router-dom
 - React stripe js
 - Redux/toolkit
-- Js cookie
+- JS cookie
 - React toastify

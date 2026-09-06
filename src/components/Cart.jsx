@@ -16,6 +16,7 @@ const Cart = () => {
     const navigate = useNavigate();
     const { getAuthItems } = useAuth();
     //const [items, setItems] = useState(JSON.parse(sessionStorage.getItem('cart')) || []);
+
     const [items, setItems] = useState(() => {
         try {
         const storedCart = sessionStorage.getItem("cart");
@@ -29,27 +30,14 @@ const Cart = () => {
         return [];
     });    
     
-    //const cart = useSelector((state) => state.cart.items);
-   // const [items, setItems] = useState(cartItems || []);
-    
     useEffect(() => {
         setItems(cartItems);
     }, [setItems, cartItems]);
-    
-   /*  const errors = {
-        //items: getCartItems().length === 0
-        items: items?.length === 0
-    } */
-
-    //const disabled = Object.keys(errors).some((x) => errors[x]);
 
     const handleClick =() => {
         navigate("/home");
     }
 
-    //const isCartEmpty = useMemo(() => getCartItems().length === 0, [getCartItems().length]);
-    //const isCartEmpty = useMemo(() => cartItems?.length === 0, [cartItems?.length]);
-    //const isCartEmpty = cart?.length === 0;
     const isCartEmpty = useMemo(() => items.length === 0, [items.length]);
     
     const isAuthenticated = getAuthItems()[0]?.isAuthenticated;
@@ -90,7 +78,7 @@ const Cart = () => {
             (total, item) => (total += item.price * item.quantity),
             0
         ); 
-        return total;
+        return total.toFixed(2);
     };    
     
     return ( 

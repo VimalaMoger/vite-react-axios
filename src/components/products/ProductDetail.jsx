@@ -14,6 +14,7 @@ import { addToCart, selectCartItems } from "../../contexts/contextusingRedux/car
 
 
 export default function ProductDetail() {
+  
     //const cartContext = useContext(CartContext);
     //const { addProduct, getCartItems } = useCart();
     const dispatch = useDispatch();
@@ -23,23 +24,19 @@ export default function ProductDetail() {
     const zoomRef = useRef(null);
     const [backgroundPosition, setBackgroundPosition] = useState("center");
     const [isHovering, setIsHovering] = useState(false);
-   
-    //const [totalCount, setTotalCount] = useState(0);
-    //const [buttonId, setButtonId]= useState(JSON.parse(sessionStorage.getItem('isAddClicked')) || 0); 
 
     const id = product.data.productId;
     const name = product.data.name;
     const price = product.data.price;
     const itemImg = product.data.imageUrl;
     let stockLevel = product.data.stockLevel;
+
+    const cartItems = useSelector(selectCartItems);   
+    const itemQuantity = cartItems.find(item => item.name === product.data.name);
     
-    const itemQuantity = useSelector(selectCartItems)?.filter((item) => (item.productId === product.data.id) ? item.quantity : 0);
-    const renderStockLevel = useSelector(selectCartItems)?.filter((item) => (item.productId === product.data.id) ? item.stockLevel : 0);
-   
-    
-    const [stockUpdate, setStockUpdate] = useState(renderStockLevel[0]?.stockLevel);   
-    const [userSelectQuantity, setUserSelectQuantity] = useState(itemQuantity[0]?.quantity);
-    const [qty, setQty] = useState(itemQuantity[0]?.quantity);
+    const [stockUpdate, setStockUpdate] = useState(itemQuantity?.stockLevel);   
+    const [userSelectQuantity, setUserSelectQuantity] = useState(itemQuantity?.quantity);
+    const [qty, setQty] = useState(() => itemQuantity?.quantity || 0);
 
     const isOutOfStock = stockUpdate === 0;
     const backOrder = stockLevel === 0;
@@ -54,9 +51,13 @@ export default function ProductDetail() {
     }, [params.productId]);
 
     useEffect(() => {
-        //debugger;
+        if (itemQuantity !== undefined && itemQuantity !== null){
+            setQty(itemQuantity?.quantity);
+        }
+    },[itemQuantity?.quantity]);
+
+    useEffect(() => {
         setUserSelectQuantity(qty);
-        //setQty(itemQuantity[0]?.quantity || qty);
     }, [qty]);  
 
     console.log("qty userSelectQty ", qty, userSelectQuantity);

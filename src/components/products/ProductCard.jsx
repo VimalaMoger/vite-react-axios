@@ -14,7 +14,6 @@ export default function ProductCardComponent({product}) {
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    //const addButtonId = useSelector(selectAddButtonId);
     //const cartContext = useContext(CartContext);
     //const { addProduct } = useCart();
     const id = product.productId;
@@ -22,18 +21,15 @@ export default function ProductCardComponent({product}) {
     const price = product.price;
     const itemImg = product.imageUrl;
     const stockLevel = product.stockLevel;
-    //const [buttonId, setButtonId]= useState(JSON.parse(sessionStorage.getItem('cart.isAddClicked')) || 0);
-   // const [buttonId, setButtonId]= useState(addButtonId);
     const [stockUpdate, setStockUpdate] = useState(stockLevel);
-    //const [userSelectQuantity, setUserSelectQuantity] = useState(0);
     const isOutOfStock = stockUpdate === 0; 
     const [showToast, setShowToast] = useState(false);
 
-  /*   const handleAddToCart = () => {
+    const handleAddToCart = () => {
         dispatch(addToCart({id, name, price, itemImg, stockLevel}));
         setShowToast(true);
         setTimeout(() => setShowToast(false), 1000);
-    }; */
+    }; 
 
     return (
         <div className="grid grid-col-3 items-center justify-center border border-gray-300 p-1">
@@ -53,10 +49,8 @@ export default function ProductCardComponent({product}) {
                 <p className="border h-8 w-8 text-center top-2 right-2 hover:text-gray-800">
                     <StockLevelUpdateComponent id={id} stock={stockLevel} sUpdate={stockUpdate} setSUpdate={setStockUpdate} />
                 </p>
-                <button disabled={isOutOfStock} className="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded" onClick={() => 
-                            dispatch(addToCart({id, name, price, itemImg, stockLevel}))}>{isOutOfStock ? "OUT OF STOCK" : "ADD TO CART"}</button>
         
-                {/* <button disabled={isOutOfStock} onClick={handleAddToCart} className="font-medium text-blue-700 hover:bg-sky-400 focus:outline-voilet-500 rounded" 
+                <button disabled={isOutOfStock} onClick={handleAddToCart} className="font-medium text-blue-700 hover:bg-sky-400 focus:outline-voilet-500 rounded" 
                          >{isOutOfStock ? "OUT OF STOCK" : "ADD TO CART"}</button>
           
                 {showToast && (
@@ -64,7 +58,7 @@ export default function ProductCardComponent({product}) {
                 <div>
                   <ItemAddedPopup name={name} /> 
                 </div>
-                )}*/}
+                )}
             </div>
         </div>
     );

@@ -8,13 +8,12 @@ const CartTotalAmount = ({totalAmount, setTotalAmount}) => {
   
   //const { getCartTotal } = useCart();
   const cartTotalPrice = useSelector(selectTotalPrice);
-  //const cartTotalPrice = useSelector((state) => state.cart.totalPrice);
   const storedCart = sessionStorage.getItem("cart");
-  const totalP = storedCart ? JSON.parse(storedCart).totalPrice : 0;
+  const total = storedCart ? JSON.parse(storedCart).totalPrice : 0;
 
   
   useEffect(() => {
-    setTotalAmount(totalP);
+    setTotalAmount(total.toFixed(2));
     const timer = setInterval(() => {
       if(cartTotalPrice) {
         setTotalAmount(cartTotalPrice.toFixed(2)); // Notify parent
@@ -22,7 +21,7 @@ const CartTotalAmount = ({totalAmount, setTotalAmount}) => {
       return totalAmount;   
     }, 500);
     return () => clearInterval(timer);
-  }, [totalAmount, setTotalAmount, cartTotalPrice, totalP]); 
+  }, [totalAmount, setTotalAmount, cartTotalPrice, total]); 
   
   return (
     <span className="mt-1 text- font-semibold text-grey-950 sm-hidden md:block">${totalAmount}</span>

@@ -3,7 +3,7 @@ import { useActionData, useNavigation, useSubmit, Form, redirect, useLoaderData 
 import PageTitle from './home/PageTitle';
 import apiClient from ".././api/apiClient";
 import { toast } from 'react-toastify';
-import { saveContactData } from "../receiver";
+import { saveContactData } from "../api-requests/receiver";
 import { ContactDetailsElement } from "@stripe/react-stripe-js";
 
 const Contact = () => {

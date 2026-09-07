@@ -1,7 +1,7 @@
 import React, { act, useEffect, useState } from "react";
 import { useLoaderData, useNavigate, useNavigation, useActionData, Form } from "react-router-dom";
-import { getProfile } from "../../profileFetcher";
-import { saveProfileData } from "../../saveProfileData";
+import { getProfile } from "../../api-requests/profileFetcher";
+import { saveProfileData } from "../../api-requests/saveProfileData";
 import { useAuth } from "../../contexts/auth-context";
 import PageTitle from "../home/PageTitle";
 import { toast } from "react-toastify";

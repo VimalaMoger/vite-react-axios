@@ -1,5 +1,5 @@
 import React from "react";
-import { getOrders } from "../../orderFetcher";
+import { getOrders } from "../../api-requests/orderFetcher";
 import { useLoaderData } from "react-router-dom";
 import PageTitle from "../home/PageTitle";
 

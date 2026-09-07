@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import PageTitle from "../home/PageTitle";
 import { Link, Form, useActionData, useNavigate, useNavigation } from "react-router-dom";
-import { saveLoginData } from "../../loginDataReceiver";
+import { saveLoginData } from "../../api-requests/loginDataReceiver";
 import { toast } from "react-toastify";
 import { useAuth } from "../../contexts/auth-context";
 
@@ -27,18 +27,6 @@ export default function Login() {
             toast.error(actionData.errors.message ||  "Login failed.");
         }
     }, [actionData, navigate]);
-  
-    /*useEffect(() => {
-        if (actionData?.success) {
-            loginSuccess(actionData.jwtToken, actionData.user);
-            sessionStorage.removeItem("redirectPath");
-            setTimeout(() => {
-              navigate(from);
-            }, 100);
-        } else if (actionData?.errors) {
-            toast.error(actionData.errors.message || "Login failed.");
-        }
-    }, [actionData]); */
   
     const labelStyle =
         "block text-lg font-semibold text-primary dark:text-light mb-2";

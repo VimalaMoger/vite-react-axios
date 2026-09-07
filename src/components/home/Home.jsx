@@ -1,7 +1,7 @@
 import PageHeading from "./PageHeading";
 import ProductListingsComponent from "../products/ProductListings";
 import React, { useState, useEffect } from 'react';
-import { getProducts } from "../../fetcher";
+import { getProducts } from "../../api-requests/fetcher";
 import { useLoaderData } from "react-router-dom";
 
 export default function HomeComponent() {

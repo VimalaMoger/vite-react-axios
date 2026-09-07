@@ -1,8 +1,8 @@
 import React from "react";
 import { useLoaderData, useRevalidator } from "react-router-dom";
-import { getOrders } from "../../../adminOrderFetcher";
+import { getOrders } from "../../../api-requests/adminOrderFetcher";
 import PageTitle from "../../home/PageTitle";
-import { performAdminAction } from "../../../adminOrderAction";
+import { performAdminAction } from "../../../api-requests/adminOrderAction";
 import { toast } from "react-toastify";
 
 

@@ -1,12 +1,11 @@
 import React, { useEffect, useState, useRef, useContext } from "react";
 //import { useCart } from "../../contexts/cartContext";
 import { useParams } from "react-router-dom";
-import { getProductById } from "../../fetcher";
+import { getProductById } from "../../api-requests/fetcher";
 import PriceComponent from "./Price";
 import { useNavigate, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-//import ItemAddedPopup from "../ItemAddedPopup";
 import StockLevelUpdateComponent from "../StockLevel";
 import CartCounter from "../CartCounter";
 import { useSelector, useDispatch } from "react-redux";
@@ -124,7 +123,6 @@ export default function ProductDetail() {
                             dispatch(addToCart({id, name, price, itemImg, stockLevel, userSelectQuantity}))}>{isOutOfStock || backOrder || quantity ? "OUT OF STOCK" : "ADD TO CART"}</button>                 
                         <button onClick={handleViewCart} className="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded">VIEW CART</button>
                     </div>
-                   {/* <ItemAddedPopup id={product.data.id} buttonId={buttonId} setButtonId={setButtonId} /> */}
                 </div>
             </div>
         </div>

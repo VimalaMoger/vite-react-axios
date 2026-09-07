@@ -1,7 +1,7 @@
 import React from "react";
-import { getMessages } from "../../../adminMessageFetcher";
+import { getMessages } from "../../../api-requests/adminMessageFetcher";
 import { useLoaderData, useRevalidator } from "react-router-dom";
-import { closeMessage } from "../../../adminOrderAction";
+import { closeMessage } from "../../../api-requests/adminOrderAction";
 import { toast } from "react-toastify";
 import PageTitle from "../../home/PageTitle";
 

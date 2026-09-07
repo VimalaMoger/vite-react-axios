@@ -1,5 +1,5 @@
 import { React, useEffect, useRef } from "react";
-import { saveRegisterData } from "../../registerdatareceiver";
+import { saveRegisterData } from "../../api-requests/registerdatareceiver";
 import { Link, Form, useActionData, useNavigate, useNavigation, useSubmit } from "react-router-dom";
 import PageTitle from "../home/PageTitle";
 import { toast } from "react-toastify";

@@ -26,7 +26,6 @@ Features and enhancements:
 React Hooks:
 
 - UseState, useEffect, useMemo, useSubmit, useContext, useReducer,
-- Handle error using react useRouterError hook
 
 React Routes:
 

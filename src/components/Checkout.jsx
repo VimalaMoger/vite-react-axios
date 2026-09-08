@@ -11,9 +11,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { selectCartItems, selectTotalPrice, clearBasket  } from "../contexts/contextusingRedux/cart-slice";
 
 export default function Checkout() {
-  
+   // debugger;
     const dispatch = useDispatch();
     const cartTotalPrice = useSelector(selectTotalPrice);
+    const cartItems = useSelector(selectCartItems);
     const { getAuthItems } = useAuth();
     //const { getCartCount, getCartTotal, getCartItems, clearBasket } = useCart();
     const stripe = useStripe();
@@ -82,8 +83,7 @@ export default function Checkout() {
             amount: cartTotalPrice * 100,
             currency: "usd",
         }
-        //debugger;
-       
+         
         try {
             //const { clientSecret } = response.data;
             const response = paymentProcessor(paymentData)
@@ -112,26 +112,27 @@ export default function Checkout() {
             } else if(paymentIntent && paymentIntent.status === "succeeded"){
                 toast.success("Payment successful!");
                 try {
-                    const orderData = {
+                    const orderData = {                        
                         totalPrice: cartTotalPrice,
                         paymentId: paymentIntent.id,
                         paymentStatus: paymentIntent.status,
-                        items: selector(selectCartItems()).map((item) => ({
+                        items: cartItems?.map((item) => ({
                             productId: item.id,
                             quantity: item.quantity,
                             price: item.price,
                         })),
                     }
                     const res = await receiveOrderData(orderData);
+                    console.log("res ", res, res.data);
                     sessionStorage.setItem("skipRedirectPath", "true");
-                    clearBasket();
+                    dispatch(clearBasket());
                     navigate("/order-success");
                 } catch(error) {
                     setErrorMessage("Order creation failed. Please contact support.");
                 }
             }
         }catch(error){
-             setErrorMessage("Error processing payment. Please try again later.");       
+            setErrorMessage("Error processing payment. Please try again later.");       
         }finally{
             setIsProcessing(false);
         }       

@@ -46,7 +46,7 @@ Migrating Cart state from React Context to Redux store
 Stripe account creation:
 
 - Implementing Checkout with Stripe with required Address details before proceed with Checkout
-- Payment processing using Orders API call
+- Payment processing using Orders API call for saving Order details in user Profile Orders section
 
 Axios:
 - Axios library for API call, including CORS during development

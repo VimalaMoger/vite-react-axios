@@ -2,19 +2,6 @@
 
 ## Axios in a Vite + React project
 
-```
-vite-react-axios/
-    ├── src/ 
-    │   ├── App.jsx
-    │   ├── api.js
-    │   └── main.jsx
-        ├── React Components
-        ├── Axios API call Async JS functions
-    ├── index.html
-    ├── package.json
-    └── vite.config.js
-```
-
 Components created:
 
  ```

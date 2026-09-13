@@ -67,6 +67,8 @@ UI:
 - Testing end to end register, login operations with new changes
 - Testing the app to validate Redux changes around the cart state
 
+[App to view](https://lighthearted-stroopwafel-c66603.netlify.app/)
+
 Dependencies:
 
 - Node.js v24.11.1

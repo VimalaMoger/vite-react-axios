@@ -1,7 +1,7 @@
 # E-Store UI
 
 ## Axios in a Vite + React project + Tailwind CSS
-Created Eazy stickers page with Header, Body and Footer section. Header contains menu items such as Home, About, Login, and Cart. Body section with Page Title with Heading, Search box, Dropdown filter, and Product Cards. Each Product Card with Price, Stock level and Product Title with description, and two clickable buttons with ***Add to Cart and View Product***. Once the item added to cart, user can either click an View Cart button or Cart tab at the top of the page. Cart page contains Check out button, for which user needs to Sign in and enter address details saved to their profile. User is made to Check out page and perform payment details to successfully complete the order
+Created Eazy stickers page with Header, Body and Footer section. Header contains menu items such as Home, About, Login, and Cart. Body section with Page Title and Heading, Search box, Dropdown filter, and Product Cards. Each Product Card with Price, Stock level and Product Title with description, and two clickable buttons with ***Add to Cart and View Product***. Once the item added to cart, user can either click an View Cart button or Cart tab at the top of the page. Cart page contains Check out button, for which user needs to Sign in and enter address details saved to their profile. User is made to Check out page and perform payment details to successfully complete the order
 
 Components created:
 

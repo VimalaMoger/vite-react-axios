@@ -71,6 +71,8 @@ UI:
 
 [App to view](https://lighthearted-stroopwafel-c66603.netlify.app/)
 
+```test card 4242 4242 4242 4242```
+
 Dependencies:
 
 - Node.js v24.11.1

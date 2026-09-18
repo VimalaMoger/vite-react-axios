@@ -3,7 +3,7 @@
 ## Axios in a Vite + React project + Tailwind CSS
 Created Eazy stickers page with Header, Body and Footer section. Header contains menu items such as Home, About, Login, and Cart. Body section with Page Title and Heading, Search box, Dropdown filter, and Product Cards. Each Product Card with Price, Stock level and Product Title with description, and two clickable buttons with ***Add to Cart and View Product***. Once the item added to cart, user can either click an View Cart button or Cart tab at the top of the page. Cart page contains Check out button, for which user needs to Sign in and enter address details saved to their profile. User is made to Check out page and perform payment details to successfully complete the order
 
-Components created:
+### Components created:
 
  ```
 Header content
@@ -17,7 +17,7 @@ Checkout - Payment process + User Order saved
 Footer
 ```
 
-Features and enhancements:
+### Features and enhancements:
 
 - Display Loading.. when page loads or Error message in Home page
 - Login success action from Login page
@@ -26,11 +26,11 @@ Features and enhancements:
 - Showing toast messages and redirect
 - Font Awesome library for icons
 
-React Hooks:
+### React Hooks:
 
 - UseState, useEffect, useMemo, useSubmit, useContext, useReducer,
 
-React Routes:
+### React Routes:
 
 - Routes definition using Outlet
 - Building dynamic Routes and useParams() hook
@@ -40,28 +40,28 @@ React Routes:
 - Building Cart Context and Auth Context using React Context API
 - Protecting Routes based on Auth state
 
-Migrating Cart state from React Context to Redux store
+### Migrating Cart state from React Context to Redux store
 
 - Redux and useReducer
 - Building Redux store: Creating cart slice, and store
 - Update React app to use cart state data from redux store
 
-Stripe account creation:
+### Stripe account creation:
 
 - Implementing Checkout with Stripe with required Address details before proceed with Checkout
 - Payment processing using Orders API call for saving Order details in user Profile Orders section
 
-Axios:
+### Axios:
 - Axios library for API call, including CORS during development
 - Axios instance with default settings
 - Sending JWT Token in the request for back end validation
 
-Tailwind CSS:
+### Tailwind CSS:
 
 - Dark mode and styling
 - Toggle themes
 
-UI:
+### UI:
 
 - Testing end to end registration flow
 - Testing end to end register, login operations with new changes
@@ -73,7 +73,7 @@ UI:
 
 ```test card 4242 4242 4242 4242```
 
-Dependencies:
+### Dependencies:
 
 - Node.js v24.11.1
 - Npm 11.6.2

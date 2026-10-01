@@ -1,20 +1,64 @@
 # E-Store UI
+Created a UI with Header, Body and Footer section. Header contains menu items such as Home, About, Login, and Cart. Body section with Page Title and Heading, Search box, Dropdown filter, and Product Cards. Each Product Card with Price, Stock level and Product Title with description, and two clickable buttons with ***Add to Cart and View Product***. Once the item added to cart, user can either click an View Cart button or Cart tab at the top of the page. Cart page contains Check out button, for which user needs to Sign in and enter address details saved to their profile. User is made to Check out page and perform payment details to successfully complete the order
 
-## Axios in a Vite + React project + Tailwind CSS
-Created Eazy stickers page with Header, Body and Footer section. Header contains menu items such as Home, About, Login, and Cart. Body section with Page Title and Heading, Search box, Dropdown filter, and Product Cards. Each Product Card with Price, Stock level and Product Title with description, and two clickable buttons with ***Add to Cart and View Product***. Once the item added to cart, user can either click an View Cart button or Cart tab at the top of the page. Cart page contains Check out button, for which user needs to Sign in and enter address details saved to their profile. User is made to Check out page and perform payment details to successfully complete the order
+**Installation**
+ ``` 
+Node.js
+Vite :
+  npm create vite@latest easystore-ui
+  	  - select framework: React
+  	  - select a variant: JavaScript
+cd to project folder
+npm install
+     - installs all the required dependencies
+npm run dev
+     - runs UI application
+The terminal will display a local development server URL(http:localhost:5173). Open a browser to view the app
+Visual Studio Code editor to open the project
+```
 
-### Components created:
-
- ```
-Header content
-- Menu items enhancement - About -> Contact -> Login -> Cart
-Login/Register - Login ->  User Profile created - Orders section -> User/Admin -> Logout
-Body content
-- Page Title -> Page Heading -> Search Box and Dropdown filter -> Product Cards
-Each Product Card - Product Title and description -> Price -> Stock level -> View Details or Add to Cart
-Cart -> Checkout button -> Clear Basket, Increase Quantity -> Decrease quantity -> Remove item -> Back to Home page
-Checkout - Payment process + User Order saved
-Footer
+## Project Structure
+```bash
+       
+        │── src/
+                ├── api-requests
+                    ├── product fetch/save
+                    ├── order fetch/save
+                    ├── profile fetch/receiver
+                    ├── register save
+                    ├── payment save
+                    ├── login save
+                ├── api
+                    ├── apiClient
+                |── components/
+                    ├── footer
+                    ├── home
+                    ├── login
+                    ├── products
+                    ├── register
+                    ├── search
+                    ├── searchfilter
+                    ├── userdata
+                    ├── About
+                    ├── Cart
+                    ├── CartCounter
+                    ├── CartTotal
+                    ├── Checkout
+                    ├── Contact
+                    ├── ErrorPage
+                    ├── Header
+                    ├── ItemAddedPopup
+                    ├── Order-success
+                    ├── ProtectedRoute
+                    ├── StockLevel                    
+                ├── contexts
+                    ├── contextusingRedux
+                        ├── cart-slice.js
+                        ├── store.js
+                    ├── auth-context.jsx
+                    ├── auth-reducer.jsx
+                │── App.jsx
+                │── main.jsx
 ```
 
 ### Features and enhancements:
@@ -80,8 +124,9 @@ Footer
 - Tailwind CSS 4.2.3
 - VITE 8.0.11
 - Axios
-- React-router-dom
+- Font Awesome library
 - React stripe js
 - Redux/toolkit
 - JS cookie
 - React toastify
+- Visual Studio code Editor

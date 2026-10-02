@@ -1,7 +1,7 @@
 # E-Store UI
-Created a UI with Header, Body and Footer section. Header contains menu items such as Home, About, Login, and Cart. Body section with Page Title and Heading, Search box, Dropdown filter, and Product Cards. Each Product Card with Price, Stock level and Product Title with description, and two clickable buttons with ***Add to Cart and View Product***. Once the item added to cart, user can either click an View Cart button or Cart tab at the top of the page. Cart page contains Check out button, for which user needs to Sign in and enter address details saved to their profile. User is made to Check out page and perform payment details to successfully complete the order
+Created a UI with Header, Body and Footer section. Header contains menu items such as Home, About, Login, and Cart. Body section includes Page Title and Heading, Search box, Dropdown filter, and Product Cards. Each Product Card displays the Price, Stock level and Product Title with description along with two clickable buttons: **Add to Cart and View Product**. Once the item is added to the cart, user can either click the View Cart button or access the Cart tab at the top of the page. Cart page contains Checkout button. To proceed with Checkout the user needs to Sign in and enter address details, which are saved to their profile. User is made to Check out page where they enter payment details to successfully complete the order
 
-**Installation**
+**Initial set up**
  ``` 
 Node.js
 Vite :
@@ -15,6 +15,8 @@ npm run dev
      - runs UI application
 The terminal will display a local development server URL(http:localhost:5173). Open a browser to view the app
 Visual Studio Code editor to open the project
+
+Node.js v24.11.1, NPM 11.6.2, Tailwind CSS 4.2.3, VITE 8.0.11, Axios, Font Awesome library, React stripe js, Redux toolkit, JS cookie, React toastify, Visual Studio code Editor
 ```
 
 ## Project Structure
@@ -116,17 +118,3 @@ Visual Studio Code editor to open the project
 [App to view](https://lighthearted-stroopwafel-c66603.netlify.app/)
 
 ```test card 4242 4242 4242 4242```
-
-### Dependencies:
-
-- Node.js v24.11.1
-- Npm 11.6.2
-- Tailwind CSS 4.2.3
-- VITE 8.0.11
-- Axios
-- Font Awesome library
-- React stripe js
-- Redux/toolkit
-- JS cookie
-- React toastify
-- Visual Studio code Editor
